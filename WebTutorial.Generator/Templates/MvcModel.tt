@@ -1,0 +1,20 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ include file="ImportTpl.tt" #>
+using System.Web;
+using NTX.SysCore.Module.WebTutorial.Models;
+using NTX.SysCore.Web.UI;
+using System.ComponentModel.DataAnnotations;
+using NTX.SysCore.DataAnnotations;
+using NTX.SysCore.Web.UI.Angular;
+namespace NTX.SysCore.Module.WebTutorial.Models
+{
+    public class <#= Setting.ControllerName #>IndexModel
+    {
+
+        public string Value { get; set; }
+    }
+}

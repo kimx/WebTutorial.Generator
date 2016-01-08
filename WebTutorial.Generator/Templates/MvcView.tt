@@ -1,0 +1,54 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ include file="ImportTpl.tt" #>
+@using NTX.SysCore.Module.WebTutorial.Models
+@model <#= Setting.ControllerName #>IndexModel
+@{ViewBag.Title = "<#= Setting.ProgramName #>";}
+<div ng-app="App" ng-controller="IndexController as vm"  ng-init="vm.Init()" class="hidden">
+    @using (var form = @Html.BeginAngularForm("editForm", new { @class = "form-horizontal" }))
+    {
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="box-header with-border">
+                    <h3 class="box-title"><#= Setting.Descript #></h3>
+                </div>
+                <div class="box-body">
+				  <div class="form-group">
+                        @form.LabelFor(m => m.Value, new { @class="col-sm-2"})
+                        <div class="col-sm-10">
+                           @form.TextBoxFor(m=>m.Value)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-10  col-sm-offset-2">
+                            <span class="label label-default">Demo</span>
+							<button class="btn btn-default" ng-click="vm.Save();">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    }
+ </div>
+    @section scripts{
+        @ScScripts.RenderAngularJs()
+        @ErpScripts.RenderApp()
+        <script>
+            new Tutorial.<#= Setting.ControllerName #>.App();
+        </script>
+    }
+    @*Code-Example*@
+    @{
+        NTX.SysCore.Module.WebTutorial.Models.ReadCodeCollection models = new NTX.SysCore.Module.WebTutorial.Models.ReadCodeCollection();
+        models
+           .Add(@"Areas\Tutorial\Views\\<#= Setting.ControllerName #>\Index.cshtml", "View")
+           .Add(@"Areas\Tutorial\Models\\<#= Setting.ControllerName #>IndexModel.cs", "Model")
+           .Add(@"Areas\Tutorial\Views\\<#= Setting.ControllerName #>\app.ts", "App")
+           .Add(@"Areas\Tutorial\Views\\<#= Setting.ControllerName #>\IndexController.ts", "AngularController")
+           .Add(@"Areas\Tutorial\Controllers\\<#= Setting.ControllerName #>Controller.cs", "Controller");
+    }
+    @Html.Partial("_ReadCode", models)

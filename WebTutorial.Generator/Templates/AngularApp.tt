@@ -1,0 +1,15 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ include file="ImportTpl.tt" #>
+module Tutorial.<#= Setting.ControllerName #>
+{
+   export class App {
+        constructor() {
+            CorexERP.AppBuilder.CreateApp("App")
+                .controller("IndexController", ['$scope',IndexController]);
+        }
+    }
+}
