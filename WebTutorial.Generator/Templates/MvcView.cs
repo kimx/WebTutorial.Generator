@@ -18,7 +18,7 @@ namespace WebTutorial.Generator.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
+    #line 1 "D:\GitHub\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "14.0.0.0")]
     public partial class MvcView : MvcViewBase
     {
@@ -30,14 +30,14 @@ namespace WebTutorial.Generator.Templates
         {
             this.Write("\r\n@using NTX.SysCore.Module.WebTutorial.Models\r\n@model ");
             
-            #line 8 "C:\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
+            #line 8 "D:\GitHub\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Setting.ControllerName));
             
             #line default
             #line hidden
             this.Write("IndexModel\r\n@{ViewBag.Title = \"");
             
-            #line 9 "C:\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
+            #line 9 "D:\GitHub\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Setting.ProgramName));
             
             #line default
@@ -49,14 +49,19 @@ namespace WebTutorial.Generator.Templates
         <div class=""row"">
             <div class=""col-sm-6"">
                 <div class=""box-header with-border"">
-                    <h3 class=""box-title"">");
+                    <h3 class=""box-title""><span class=""text-primary"">說明 : </span>");
             
-            #line 16 "C:\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
+            #line 16 "D:\GitHub\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Setting.Descript));
             
             #line default
             #line hidden
             this.Write(@"</h3>
+					  <br />
+            <br />
+            <h3 class=""box-title"">
+                <span class=""text-success"">結果 : </span></span>
+            </h3>
                 </div>
                 <div class=""box-body"">
 				  <div class=""form-group"">
@@ -83,7 +88,7 @@ namespace WebTutorial.Generator.Templates
         <script>
             new Tutorial.");
             
-            #line 41 "C:\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
+            #line 46 "D:\GitHub\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Setting.ControllerName));
             
             #line default
@@ -97,28 +102,28 @@ namespace WebTutorial.Generator.Templates
         models
            .Add(@""Areas\Tutorial\Views\");
             
-            #line 48 "C:\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
+            #line 53 "D:\GitHub\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Setting.ControllerName));
             
             #line default
             #line hidden
             this.Write("\\Index.cshtml\", \"View\")\r\n           .Add(@\"Areas\\Tutorial\\Models\\");
             
-            #line 49 "C:\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
+            #line 54 "D:\GitHub\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Setting.ControllerName));
             
             #line default
             #line hidden
             this.Write("IndexModel.cs\", \"Model\")\r\n           .Add(@\"Areas\\Tutorial\\Views\\");
             
-            #line 50 "C:\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
+            #line 55 "D:\GitHub\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Setting.ControllerName));
             
             #line default
             #line hidden
             this.Write("\\app.ts\", \"App\")\r\n           .Add(@\"Areas\\Tutorial\\Views\\");
             
-            #line 51 "C:\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
+            #line 56 "D:\GitHub\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Setting.ControllerName));
             
             #line default
@@ -126,7 +131,7 @@ namespace WebTutorial.Generator.Templates
             this.Write("\\IndexController.ts\", \"AngularController\")\r\n           .Add(@\"Areas\\Tutorial\\Cont" +
                     "rollers\\");
             
-            #line 52 "C:\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
+            #line 57 "D:\GitHub\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Setting.ControllerName));
             
             #line default
@@ -135,7 +140,7 @@ namespace WebTutorial.Generator.Templates
             return this.GenerationEnvironment.ToString();
         }
         
-        #line 1 "C:\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
+        #line 1 "D:\GitHub\WebTutorial.Generator\WebTutorial.Generator\Templates\MvcView.tt"
 
 private global::WebTutorial.Generator.Models.SettingModel _SettingField;
 

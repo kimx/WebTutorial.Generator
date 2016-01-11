@@ -13,7 +13,12 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="box-header with-border">
-                    <h3 class="box-title"><#= Setting.Descript #></h3>
+                    <h3 class="box-title"><span class="text-primary">說明 : </span><#= Setting.Descript #></h3>
+					  <br />
+            <br />
+            <h3 class="box-title">
+                <span class="text-success">結果 : </span></span>
+            </h3>
                 </div>
                 <div class="box-body">
 				  <div class="form-group">
